@@ -1,0 +1,33 @@
+﻿@{
+
+}
+<h1>Menu Items</h1>
+<p><a asp-controller="Menu" asp-action="Add">Add Item</a></p>
+@if (ViewBag.menuItems.Count == 0)
+{
+    <p>Menu is blank.</p>
+}
+<form method="post" action="/Menu/Remove">
+    @foreach (menuItem item in ViewBag.menuItems)
+    {
+        <div>
+            <input type="checkbox" name="rmvitem" value="@item.Name">
+            <label for="rmvitem"> &nbsp; @item.Name &nbsp; </label>
+            @item.Description &nbsp;
+            <i style="margin: 0 10px 0 10px">$@item.Price</i>
+        </div>
+
+    }
+    @if (ViewBag.menuItems.Count > 0)
+    {
+        <p>
+            <input type="submit" value="Remove Item" />
+        </p>
+    }
+</form>
+
+<p font-size="8px">
+    <i>
+        Last Updated 
+    </i>
+</p>

@@ -1,0 +1,37 @@
+﻿@{
+
+}
+<h1>Create Item</h1>
+<form method="post">
+    <p>
+        <select name="category" style="margin:20px 0 20px 0;">
+            <option value="appetizer">Appetizer</option>
+            <option value="entree">Entree</option>
+            <option value="dessert">Dessert</option>
+            <option value="drink">Drink</option>
+        </select>
+        <br />
+    </p>
+    <p>
+        <label>
+            Name:
+        </label>
+        <input name="name" type="text" />
+        <label>
+            Price:
+        </label>
+        <input name="price" type="text" placeholder="00.00"/>
+        <br />
+    </p>
+    <p>
+        <label name="description" style="margin-top:15px">
+            Description:
+        </label>
+        <br />
+        <textarea id="textarea" rows="5" cols="59" name="description" style="margin-bottom:10px"></textarea>
+        <br />
+    </p>
+    <p>
+        <input type="submit" value="Add Item" />
+    </p>
+</form>
